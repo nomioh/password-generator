@@ -30,7 +30,7 @@ function getRandomUpper() {
 function getRandomNumber() {
   return numberChar.charAt(Math.ceil(Math.random() * numberChar.length));
 }
-function getRandomSymbol() {
+function getRandomSpecial() {
   return specialChar.charAt(Math.ceil(Math.random() * specialChar.length));
 }
 
@@ -53,17 +53,13 @@ function generatePassword() {
   } else {
     // true or false questions/options for user
     let isLower = confirm(
-      "Would you like to include LOWERCASE characters in your password?"
-    );
+      "Would you like to include LOWERCASE characters in your password?");
     let isUpper = confirm(
-      "Would you like to include UPPERCASe characters in your password?"
-    );
+      "Would you like to include UPPERCASe characters in your password?");
     let isNumber = confirm(
-      "Would you like to include numerical characters in your password?"
-    );
+      "Would you like to include numerical characters in your password?");
     let isSpecialChar = confirm(
-      "Would you like to include special characters in your password?"
-    );
+      "Would you like to include special characters in your password?");
 
     return processPasswordGenerator(
       passLength,
